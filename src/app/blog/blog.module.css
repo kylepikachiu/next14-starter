@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* we want 3 posts per row. cant just do 33% because our gap takes some space*/
+.post{
+    width: 30%;
+}
+
+/* change number of images being shown based on  screen size*/
+@media screen and (max-width: 1280px) {
+    .post {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post {
+        width: 100%;
+    }
+}

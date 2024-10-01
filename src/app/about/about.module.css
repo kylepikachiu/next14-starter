@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    gap: 100px;
+}
+
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.subtitle{
+    color: var(--btn);
+}
+
+.title{
+    font-size: 54px;
+}
+
+.desc {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.boxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box h1{
+    color: var(--btn)
+}
+
+/* ! The image is fill whihc is positioned absolutely so it uses
+ the the closest parent container positioned relatively as its cap
+ since img container is now psoition relative the image doesnt get larger
+ then the imgcontainer otherwise it would fill to the size of the 
+ html body */
+.imgContainer{
+    flex: 1;
+    position: relative;
+}
+/* ! Makes it so that image fills as much as possible while maintaining 
+aspect ratio otherwise it will just set width and height to parents 
+regardless of how good it looks */
+.img{
+    object-fit: contain;}
+
+    /* Change orientation of flex container so that the image doesnt keep shrinking forever */
+/* ! Picture disappears on mobile how to fix */
+@media (max-width: 768px) {
+    .container {
+       flex-direction: column;
+       text-align: center;
+    }
+    .boxes{
+        flex-direction: column;
+        gap: 50px;
+    }
+}

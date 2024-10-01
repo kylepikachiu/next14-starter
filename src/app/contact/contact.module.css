@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+/* Have to assign height to see image. in about image came second so it 
+inherited its height from the height of the stuff on the left of the flex
+container */
+.imgContainer{
+    flex: 1;
+    position: relative;
+    height: 500px;
+}
+
+.img {
+    object-fit: contain;
+}
+
+.formContainer{
+    flex: 1;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form input,
+.form textarea {
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--bgSoft);
+    color: var(--text);
+}
+
+.form button{
+    padding: 20px;
+    background-color: var(--btn);
+    color: var(--text);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Change orientation of flex container so that the image doesnt keep shrinking forever */
+@media (max-width: 768px) {
+    .container {
+       flex-direction: column;
+    }
+}

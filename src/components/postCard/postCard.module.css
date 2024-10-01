@@ -1,0 +1,48 @@
+/* margin bottom to make space between cards when we lay them out */
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* put the date and image next to each other */
+  .top{
+    display: flex;
+  }
+  
+  /* image is 90% of the size while the date gets the last 10% */
+  .imgContainer{
+    width: 90%;
+    height: 400px;
+    position: relative;
+  }
+
+  .img {
+    object-fit: cover;
+  }
+
+  /* You can use transform: rotate(270deg) to rotate the date */
+  .date {
+    font-size: 12px;
+    transform: rotate(270deg);
+    margin: auto;
+  }
+
+  .title {
+    width: 90%;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* in case you havea long text you want to make it less wide so it doesnt overflow */
+  .desc{
+    width: 90%;
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: gray;
+  }
+  /* * make the link underlined with text decoration */
+  .link{
+    text-decoration: underline;
+  }
